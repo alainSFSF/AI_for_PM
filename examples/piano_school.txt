@@ -1,0 +1,3 @@
+Piano Lessons Online
+
+We are a music education platform that connects students with professional piano instructors. Users can browse through our roster of certified teachers, view their availability, and book individual or group piano lessons. Each session can be scheduled for 30, 45, or 60 minutes. Students can choose between in-person lessons at our studio or virtual lessons via video call. The platform includes a calendar system where students can view upcoming lessons, reschedule if needed, and make payments online. Teachers can manage their schedules, track student progress, and share learning materials through the platform.
