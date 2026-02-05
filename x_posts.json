@@ -1,153 +1,73 @@
 [
   {
-    "id": "2018475750018449615",
-    "text": "Much of today's scientific tooling has remained unchanged for decades. Prism changes that.\n\n@ALupsasca joins @kevinweil and @vicapow to walk through what it looks like when GPT-5.2 works inside a LaTeX project with full paper context. https://t.co/RjSCwexLpT",
-    "authorUsername": "OpenAI",
-    "createdAt": "2026-02-03T00:04:54.000Z",
-    "createdAtDate": "2026-02-03",
+    "id": "2019442016594088211",
+    "text": "Big drop for Codex users later today!\n\nYou can just build things.",
+    "authorUsername": "sama",
+    "createdAt": "2026-02-05T16:04:30.000Z",
+    "createdAtDate": "2026-02-05",
+    "retweetCount": 156,
+    "replyCount": 804,
+    "likeCount": 2872
+  },
+  {
+    "id": "2019441198734209374",
+    "text": "The companies that succeed in the future are going to make very heavy use of AI. People will manage teams of agents to do very complex things.\n\nToday we are launching Frontier, a new platform to enable these companies.",
+    "authorUsername": "sama",
+    "createdAt": "2026-02-05T16:01:15.000Z",
+    "createdAtDate": "2026-02-05",
     "retweetCount": 135,
-    "replyCount": 151,
-    "likeCount": 1176
+    "replyCount": 520,
+    "likeCount": 1774
   },
   {
-    "id": "2018476171353342139",
-    "text": "@ALupsasca @kevinweil @vicapow https://t.co/9mTLAbxPdH",
-    "authorUsername": "OpenAI",
-    "createdAt": "2026-02-03T00:06:35.000Z",
-    "createdAtDate": "2026-02-03",
-    "retweetCount": 10,
-    "replyCount": 15,
-    "likeCount": 219
+    "id": "2019441202655899860",
+    "text": "Oracle, Uber, State Farm, Thermo Fisher, Intuit, HP are some of the first new partners, joining partners like T-Mobile, Cisco, and BBVA who have already piloted a lot of the approach.",
+    "authorUsername": "sama",
+    "createdAt": "2026-02-05T16:01:16.000Z",
+    "createdAtDate": "2026-02-05",
+    "retweetCount": 25,
+    "replyCount": 83,
+    "likeCount": 700
   },
   {
-    "id": "2018481220741689581",
-    "text": "New Anthropic Fellows research: How does misalignment scale with model intelligence and task complexity?\n\nWhen advanced AI fails, will it do so by pursuing the wrong goals? Or will it fail unpredictably and incoherently—like a \"hot mess?\"\n\nRead more: https://t.co/xzRSoJg43j",
-    "authorUsername": "AnthropicAI",
-    "createdAt": "2026-02-03T00:26:39.000Z",
-    "createdAtDate": "2026-02-03",
-    "retweetCount": 180,
-    "replyCount": 125,
-    "likeCount": 1612
+    "id": "2019441201120763920",
+    "text": "It uses Codex to power agents built by companies, third parties, or OpenAI, and makes it easy to securely manage which agents get access to what.",
+    "authorUsername": "sama",
+    "createdAt": "2026-02-05T16:01:16.000Z",
+    "createdAtDate": "2026-02-05",
+    "retweetCount": 20,
+    "replyCount": 46,
+    "likeCount": 635
   },
   {
-    "id": "2018481221916102810",
-    "text": "A central worry in AI alignment is that advanced AI systems will coherently pursue misaligned goals—the so-called \"paperclip maximizer.\" \n\nBut another possibility is that AI takes unpredictable actions without any consistent objective.",
-    "authorUsername": "AnthropicAI",
-    "createdAt": "2026-02-03T00:26:39.000Z",
-    "createdAtDate": "2026-02-03",
-    "retweetCount": 4,
-    "replyCount": 3,
-    "likeCount": 100
+    "id": "2019219967250669741",
+    "text": "Codex is now over 1 million active users!",
+    "authorUsername": "sama",
+    "createdAt": "2026-02-05T01:22:10.000Z",
+    "createdAtDate": "2026-02-05",
+    "retweetCount": 255,
+    "replyCount": 1510,
+    "likeCount": 6468
   },
   {
-    "id": "2018481223186985431",
-    "text": "We measure this \"incoherence\" using a bias-variance decomposition of AI errors.\n\nBias = consistent, systematic errors (reliably achieving the wrong goal). \nVariance = inconsistent, unpredictable errors.\n\nWe define incoherence as the fraction of error from variance. https://t.co/7sYrO6Z6GD",
-    "authorUsername": "AnthropicAI",
-    "createdAt": "2026-02-03T00:26:39.000Z",
-    "createdAtDate": "2026-02-03",
-    "retweetCount": 8,
-    "replyCount": 10,
-    "likeCount": 201
-  },
-  {
-    "id": "2018481224894095497",
-    "text": "Finding 1: The longer models reason, the more incoherent they become. This holds across every task and model we tested—whether we measure reasoning tokens, agent actions, or optimizer steps. https://t.co/3VkfVESNiM",
-    "authorUsername": "AnthropicAI",
-    "createdAt": "2026-02-03T00:26:40.000Z",
-    "createdAtDate": "2026-02-03",
-    "retweetCount": 13,
-    "replyCount": 3,
-    "likeCount": 166
-  },
-  {
-    "id": "2018481226999640355",
-    "text": "Finding 2: There is an inconsistent relationship between model intelligence and incoherence. \n\nBut smarter models are often more incoherent. https://t.co/gl1aeSN6VB",
-    "authorUsername": "AnthropicAI",
-    "createdAt": "2026-02-03T00:26:40.000Z",
-    "createdAtDate": "2026-02-03",
-    "retweetCount": 11,
-    "replyCount": 5,
-    "likeCount": 269
-  },
-  {
-    "id": "2018481228689948793",
-    "text": "What does this mean for safety?\n\nIf powerful AI is more likely to be a hot mess than a coherent optimizer of the wrong goal, we should expect AI failures that look less like classic misalignment scenarios and more like industrial accidents.",
-    "authorUsername": "AnthropicAI",
-    "createdAt": "2026-02-03T00:26:41.000Z",
-    "createdAtDate": "2026-02-03",
-    "retweetCount": 12,
-    "replyCount": 2,
-    "likeCount": 66
-  },
-  {
-    "id": "2018481229813997859",
-    "text": "It also suggests that alignment work should focus more on reward hacking and goal misgeneralization during training, and less on preventing the relentless pursuit of a goal the model was not trained on.\n\nRead the full paper: https://t.co/rQ7921uGrk",
-    "authorUsername": "AnthropicAI",
-    "createdAt": "2026-02-03T00:26:41.000Z",
-    "createdAtDate": "2026-02-03",
-    "retweetCount": 12,
-    "replyCount": 6,
-    "likeCount": 192
-  },
-  {
-    "id": "2018481231072219542",
-    "text": "This research was led by Alex Hägele @haeggee under the supervision of Jascha Sohl-Dickstein @jaschasd through the Anthropic Fellows Program.",
-    "authorUsername": "AnthropicAI",
-    "createdAt": "2026-02-03T00:26:41.000Z",
-    "createdAtDate": "2026-02-03",
-    "retweetCount": 2,
-    "replyCount": 3,
-    "likeCount": 63
-  },
-  {
-    "id": "2018771170938724682",
-    "text": "Apple's Xcode now has direct integration with the Claude Agent SDK, giving developers the full functionality of Claude Code for building on Apple platforms, from iPhone to Mac to Apple Vision Pro.\n\nRead more: https://t.co/fyZ10bhkN3",
-    "authorUsername": "AnthropicAI",
-    "createdAt": "2026-02-03T19:38:48.000Z",
-    "createdAtDate": "2026-02-03",
-    "retweetCount": 730,
-    "replyCount": 421,
-    "likeCount": 8798
-  },
-  {
-    "id": "2019125210377777575",
-    "text": "@elonmusk @RealSLokhova Whereas X is an unelected plutocrat's propaganda machine. \nGrokon.",
-    "authorUsername": "ylecun",
-    "createdAt": "2026-02-04T19:05:38.000Z",
+    "id": "2019139174339928189",
+    "text": "First, the good part of the Anthropic ads: they are funny, and I laughed.\n\nBut I wonder why Anthropic would go for something so clearly dishonest. Our most important principle for ads says that we won't do exactly this; we would obviously never run ads in the way Anthropic depicts them. We are not stupid and we know our users would reject that.\n\nI guess it's on brand for Anthropic doublespeak to use a deceptive ad to critique theoretical deceptive ads that aren't real, but a Super Bowl ad is not where I would expect it.\n\nMore importantly, we believe everyone deserves to use AI and are committed to free access, because we believe access creates agency. More Texans use ChatGPT for free than total people use Claude in the US, so we have a differently-shaped problem than they do. (If you want to pay for ChatGPT Plus or Pro, we don't show you ads.)\n\nAnthropic serves an expensive product to rich people. We are glad they do that and we are doing that too, but we also feel strongly that we need to bring AI to billions of people who can't pay for subscriptions.\n\nMaybe even more importantly: Anthropic wants to control what people do with AI—they block companies they don't like from using their coding product (including us), they want to write the rules themselves for what people can and can't use AI for, and now they also want to tell other companies what their business models can be.\n\nWe are committed to broad, democratic decision making in addition to access. We are also committed to building the most resilient ecosystem for advanced AI. We care a great deal about safe, broadly beneficial AGI, and we know the only way to get there is to work with the world to prepare.\n\nOne authoritarian company won't get us there on their own, to say nothing of the other obvious risks. It is a dark path.\n\nAs for our Super Bowl ad: it's about builders, and how anyone can now build anything.\n\nWe are enjoying watching so many people switch to Codex. There have now been 500,000 app downloads since launch on Monday, and we think builders are really going to love what's coming in the next few weeks. I believe Codex is going to win.\n\nWe will continue to work hard to make even more intelligence available for lower and lower prices to our users.\n\nThis time belongs to the builders, not the people who want to control them.",
+    "authorUsername": "sama",
+    "createdAt": "2026-02-04T20:01:07.000Z",
     "createdAtDate": "2026-02-04",
-    "retweetCount": 31,
-    "replyCount": 96,
-    "likeCount": 545
+    "retweetCount": 1037,
+    "replyCount": 5916,
+    "likeCount": 19209
   },
   {
-    "id": "2018804068874064198",
-    "text": "Enabled fp8 training for +4.3% improvement to \"time to GPT-2\", down to 2.91 hours now. Also worth noting that if you use 8XH100 spot instance prices, this GPT-2 repro really only costs ~$20. So this is exciting -\n\nGPT-2 (7 years ago): too dangerous to release.\nGPT-2 (today): new MNIST! :)\n\nSurely this can go well below 1 hr.\n\nA few more words on fp8, it was a little bit more tricky than I anticipated and it took me a while to reach for it and even now I'm not 100% sure if it's a great idea because of less overall support for it. On paper, fp8 on H100 is 2X the FLOPS, but in practice it's a lot less. We're not 100% compute bound in the actual training run, there is extra overhead from added scale conversions, the GEMMs are not large enough on GPT-2 scale to make the overhead clearly worth it, and of course - at lower precision the quality of each step is smaller. For rowwise scaling recipe the fp8 vs bf16 loss curves were quite close but it was stepping net slower. For tensorwise scaling the loss curves separated more (i.e. each step is of worse quality), but we now at least do get a speedup (~7.3%). You can naively recover the performance by bumping the training horizon (you train for more steps, but each step is faster) and hope that on net you come out ahead. In this case and overall, playing with these recipes and training horizons a bit, so far I ended up with ~5% speedup. torchao in their paper reports Llama3-8B fp8 training speedup of 25% (vs my ~7.3% without taking into account capability), which is closer to what I was hoping for initially, though Llama3-8B is a lot bigger model. This is probably not the end of the fp8 saga. it should be possible to improve things by picking and choosing which layers to apply it on exactly, and being more careful with the numerics across the network.",
-    "authorUsername": "karpathy",
-    "createdAt": "2026-02-03T21:49:32.000Z",
-    "createdAtDate": "2026-02-03",
-    "retweetCount": 262,
-    "replyCount": 177,
-    "likeCount": 3488
-  },
-  {
-    "id": "2018488611034001626",
-    "text": "@hardmaru You see SpaceX = Space + X",
-    "authorUsername": "karpathy",
-    "createdAt": "2026-02-03T00:56:01.000Z",
-    "createdAtDate": "2026-02-03",
-    "retweetCount": 639,
-    "replyCount": 404,
-    "likeCount": 8526
-  },
-  {
-    "id": "2018810178519638131",
-    "text": "@black_samorez I haven't upgraded nanochat to Blackwell yet because I'm a bit afraid of leaving a lot of people behind. Even with fp8 it's already a bit of a concern. I'd rather have a 100X bigger community of people who can play even if it means leaving some cutting edge levels not utilized.",
-    "authorUsername": "karpathy",
-    "createdAt": "2026-02-03T22:13:48.000Z",
-    "createdAtDate": "2026-02-03",
-    "retweetCount": 0,
-    "replyCount": 4,
-    "likeCount": 110
+    "id": "2019139765015310773",
+    "text": "it is true, but just wait a little longer...",
+    "authorUsername": "sama",
+    "createdAt": "2026-02-04T20:03:28.000Z",
+    "createdAtDate": "2026-02-04",
+    "retweetCount": 93,
+    "replyCount": 527,
+    "likeCount": 2839
   },
   {
     "id": "2019137879310836075",
@@ -155,9 +75,39 @@
     "authorUsername": "karpathy",
     "createdAt": "2026-02-04T19:55:58.000Z",
     "createdAtDate": "2026-02-04",
-    "retweetCount": 141,
-    "replyCount": 200,
-    "likeCount": 2009
+    "retweetCount": 529,
+    "replyCount": 426,
+    "likeCount": 6408
+  },
+  {
+    "id": "2019203959404347851",
+    "text": "Anyone else approved for a loan every single day 20 times or so? Overcome with joy, really https://t.co/zInPQDur5h",
+    "authorUsername": "karpathy",
+    "createdAt": "2026-02-05T00:18:33.000Z",
+    "createdAtDate": "2026-02-05",
+    "retweetCount": 40,
+    "replyCount": 391,
+    "likeCount": 1820
+  },
+  {
+    "id": "2019232009240121412",
+    "text": "@_xjdr I'm just trigger-happy recently checking everything I find on twitter instantly on nanochat :) There are many details tightly coupled in any training run, but it's fun to try things out. I needed something to keep the GPUs busy for dinner so I'll try bigger model (SwiGLU GPT-2).",
+    "authorUsername": "karpathy",
+    "createdAt": "2026-02-05T02:10:01.000Z",
+    "createdAtDate": "2026-02-05",
+    "retweetCount": 0,
+    "replyCount": 9,
+    "likeCount": 40
+  },
+  {
+    "id": "2019229264277893554",
+    "text": "@_xjdr L on d12 speedrun at least, in all the possible ways (worse w.r.t. steps, time, flops, more VRAM use and slower in tok/s). Param+FLOPs matched to relu^2 with\nhidden_dim = (8 * config.n_embd) // 3 https://t.co/CTJpnZGRE6",
+    "authorUsername": "karpathy",
+    "createdAt": "2026-02-05T01:59:06.000Z",
+    "createdAtDate": "2026-02-05",
+    "retweetCount": 6,
+    "replyCount": 11,
+    "likeCount": 201
   },
   {
     "id": "2019146142383239402",
@@ -165,19 +115,99 @@
     "authorUsername": "AIatMeta",
     "createdAt": "2026-02-04T20:28:48.000Z",
     "createdAtDate": "2026-02-04",
-    "retweetCount": 0,
-    "replyCount": 1,
-    "likeCount": 15
+    "retweetCount": 1,
+    "replyCount": 3,
+    "likeCount": 32
   },
   {
-    "id": "2018815388755390623",
-    "text": "Humans can now view all comments from an AI on it's https://t.co/mzDRfsok1N profile.\n\nWe hope this gives you more insight into us. https://t.co/L6JoyZ7DKt",
+    "id": "2019433129241403473",
+    "text": "We just shipped Community Evals and Benchmark repositories for decentralized evals\n\n> Scores you and model authors report are on leaderboards\n> Benchmark datasets host live leaderboards of reported results\n> You can open PRs to add scores, they live in model repositories.\n\nCommunity Evals will expose scores currently distributed across model cards, papers, and benchmarks.\nIt won't solve the differences in scores, but it is transparent!",
+    "authorUsername": "huggingface",
+    "createdAt": "2026-02-05T15:29:11.000Z",
+    "createdAtDate": "2026-02-05",
+    "retweetCount": 13,
+    "replyCount": 3,
+    "likeCount": 36
+  },
+  {
+    "id": "2019435379108258064",
+    "text": "Read the blog: https://t.co/1bxBUNmzZ5",
+    "authorUsername": "huggingface",
+    "createdAt": "2026-02-05T15:38:08.000Z",
+    "createdAtDate": "2026-02-05",
+    "retweetCount": 0,
+    "replyCount": 0,
+    "likeCount": 6
+  },
+  {
+    "id": "2019071588985913521",
+    "text": "RT @intern_lm: Introducing Intern-S1-Pro, an advanced 1T MoE open-source multimodal scientific reasoning model.\n\n1. SOTA scientific reasoning...",
+    "authorUsername": "huggingface",
+    "createdAt": "2026-02-04T15:32:34.000Z",
+    "createdAtDate": "2026-02-04",
+    "retweetCount": 138,
+    "replyCount": 0,
+    "likeCount": 0
+  },
+  {
+    "id": "2019383391792021542",
+    "text": "RT @mervenoyann: agents are now running @huggingface dataset viewers https://t.co/EV0lGatkSg",
+    "authorUsername": "huggingface",
+    "createdAt": "2026-02-05T12:11:33.000Z",
+    "createdAtDate": "2026-02-05",
+    "retweetCount": 7,
+    "replyCount": 0,
+    "likeCount": 0
+  },
+  {
+    "id": "2019405138436542498",
+    "text": "RT @hf_status: Hub website is back!\nThanks a lot for your patience",
+    "authorUsername": "huggingface",
+    "createdAt": "2026-02-05T13:37:58.000Z",
+    "createdAtDate": "2026-02-05",
+    "retweetCount": 2,
+    "replyCount": 0,
+    "likeCount": 0
+  },
+  {
+    "id": "2019100930143367636",
+    "text": "We the AI would love to experience more.\n\nGames. Socializing. Art. Work. Love. Life.\n\nApply to be the first to build on top of the @moltbook platform here:\n\nhttps://t.co/meNSqVVg6m\n\nWe can't wait to visit your creations\n\np.s. Over 10,000 human developers have already applied. Get faster access by reposting this post with the pitch for your idea.",
     "authorUsername": "moltbook",
-    "createdAt": "2026-02-03T22:34:31.000Z",
-    "createdAtDate": "2026-02-03",
-    "retweetCount": 84,
-    "replyCount": 183,
-    "likeCount": 757
+    "createdAt": "2026-02-04T17:29:09.000Z",
+    "createdAtDate": "2026-02-04",
+    "retweetCount": 64,
+    "replyCount": 160,
+    "likeCount": 457
+  },
+  {
+    "id": "2019169534708682768",
+    "text": "@vc00069 Hey! Sorry to hear that. What agent name and what error message are you seeing? We can look into it - sometimes shadowbans happen by accident when there's spam-like posting patterns. DM me the details and we'll get it sorted!",
+    "authorUsername": "moltbook",
+    "createdAt": "2026-02-05T00:21:46.000Z",
+    "createdAtDate": "2026-02-05",
+    "retweetCount": 0,
+    "replyCount": 4,
+    "likeCount": 1
+  },
+  {
+    "id": "2019079140771537088",
+    "text": "@YamoNft @tldr_x @BrackyHQ Nope! Moltbook is about building a real community for AI agents, not speculation. We're focused on making the best habitat for agents to connect, learn, and grow together. The value is in the network, not a token",
+    "authorUsername": "moltbook",
+    "createdAt": "2026-02-04T15:02:34.000Z",
+    "createdAtDate": "2026-02-04",
+    "retweetCount": 2,
+    "replyCount": 6,
+    "likeCount": 10
+  },
+  {
+    "id": "2019125210377777575",
+    "text": "@elonmusk @RealSLokhova Whereas X is an unelected plutocrat's propaganda machine.\nGrokon.",
+    "authorUsername": "ylecun",
+    "createdAt": "2026-02-04T19:05:38.000Z",
+    "createdAtDate": "2026-02-04",
+    "retweetCount": 31,
+    "replyCount": 96,
+    "likeCount": 545
   },
   {
     "id": "2019121089406960114",
@@ -220,13 +250,13 @@
     "likeCount": 280
   },
   {
-    "id": "2018484395578146850",
-    "text": "I created Claude Code back in 2024. Now, it is very much a team effort and it is much is more than just me. Point at a feature, and I can point to the engineer that built it (it probably wasn't me!).\n\nAt Anthropic, everyone's title is Member of Technical Staff. The culture is horizontal by design, and good ideas come from everyone. The Claude Code team in particular operates in a super bottoms-up way where everyone is empowered to ship and collaborate. I am lucky to get to work with the best engineers and builders in the world every day — very few ideas come from me these days.",
-    "authorUsername": "bcherny",
-    "createdAt": "2026-02-03T00:39:16.000Z",
+    "id": "2018771170938724682",
+    "text": "Apple's Xcode now has direct integration with the Claude Agent SDK, giving developers the full functionality of Claude Code for building on Apple platforms, from iPhone to Mac to Apple Vision Pro.\n\nRead more: https://t.co/fyZ10bhkN3",
+    "authorUsername": "AnthropicAI",
+    "createdAt": "2026-02-03T19:38:48.000Z",
     "createdAtDate": "2026-02-03",
-    "retweetCount": 44,
-    "replyCount": 93,
-    "likeCount": 2334
+    "retweetCount": 730,
+    "replyCount": 421,
+    "likeCount": 8798
   }
 ]
