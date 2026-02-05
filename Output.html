@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI News Summary - February 04, 2026</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+            color: #333;
+        }
+        h1 {
+            color: #1a1a1a;
+            border-bottom: 3px solid #0066cc;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #0066cc;
+            margin-top: 30px;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+            margin-top: -5px;
+            margin-bottom: 20px;
+        }
+        .article {
+            background: white;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .article:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .headline {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #0066cc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .headline:hover {
+            color: #004499;
+            text-decoration: underline;
+        }
+        .source {
+            font-size: 0.85em;
+            color: #666;
+            font-style: italic;
+        }
+        .description {
+            font-size: 0.95em;
+            color: #555;
+            margin: 10px 0 0 0;
+            line-height: 1.5;
+        }
+        .footer {
+            margin-top: 40px;
+            padding: 20px;
+            background: #333;
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .stats {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .timestamp {
+            font-size: 0.85em;
+            color: #aaa;
+        }
+        .no-articles {
+            color: #666;
+            font-style: italic;
+            padding: 20px;
+        }
+        /* X Posts Styles */
+        .x-post {
+            background: white;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-left: 3px solid #1da1f2;
+        }
+        .x-post:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .x-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .x-user {
+            text-decoration: none;
+        }
+        .x-display-name {
+            font-weight: 600;
+            color: #333;
+        }
+        .x-username {
+            color: #666;
+            font-size: 0.9em;
+            margin-left: 5px;
+        }
+        .x-time {
+            color: #999;
+            font-size: 0.85em;
+        }
+        .x-text {
+            margin: 10px 0;
+            line-height: 1.5;
+            color: #333;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .x-text a {
+            color: #1da1f2;
+        }
+        .x-metrics {
+            display: flex;
+            gap: 15px;
+            font-size: 0.85em;
+            color: #666;
+            margin-top: 10px;
+        }
+        .x-link {
+            color: #1da1f2;
+            text-decoration: none;
+            margin-left: auto;
+        }
+        .x-link:hover {
+            text-decoration: underline;
+        }
+        /* Thread Styles */
+        .x-thread {
+            background: white;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-left: 3px solid #9b59b6;
+        }
+        .x-thread:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .thread-indicator {
+            background: #9b59b6;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            margin-left: 10px;
+        }
+        .thread-content {
+            border-left: 2px solid #e0e0e0;
+            margin-left: 10px;
+            padding-left: 15px;
+        }
+        .thread-post {
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .thread-post:last-child {
+            border-bottom: none;
+        }
+        .thread-post .x-text {
+            margin: 5px 0;
+        }
+        .x-metrics-compact {
+            display: flex;
+            gap: 10px;
+            font-size: 0.8em;
+            color: #999;
+        }
+        .thread-metrics {
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+        .x-summary {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        /* Topic Cluster Styles */
+        .content-summary {
+            background: #e8f4f8;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .content-summary p {
+            margin: 0;
+            color: #555;
+        }
+        .topic-cluster {
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .cluster-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .cluster-topic {
+            margin: 0;
+            color: #2c3e50;
+            font-size: 1.3em;
+        }
+        .cluster-count {
+            background: #3498db;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+        }
+        .cluster-entities {
+            margin-bottom: 15px;
+        }
+        .entity-tag {
+            display: inline-block;
+            background: #ecf0f1;
+            color: #7f8c8d;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        .cluster-items {
+            border-top: 1px solid #e0e0e0;
+            padding-top: 15px;
+        }
+        .cluster-item {
+            margin-bottom: 10px;
+        }
+        .cluster-item:last-child {
+            margin-bottom: 0;
+        }
+        .cluster-item .article {
+            margin: 0;
+        }
+        .cluster-item .x-post,
+        .cluster-item .x-thread {
+            margin: 0;
+        }
+        .item-source {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>AI News Summary - February 04, 2026</h1>
+    <p class="subtitle">Clustered by Topic</p>
+    
+    <div class="content-summary">
+        <p>51 items total: 7 topic clusters, 18 standalone items</p>
+    </div>
+    <div class="topic-cluster">
+    <div class="cluster-header">
+        <h3 class="cluster-topic">Claude</h3>
+        <span class="cluster-count">7 items</span>
+    </div>
+    <div class="cluster-entities"><span class="entity-tag">Claude</span></div>
+    <div class="cluster-items">
+        <div class="cluster-item article-item">
+    <span class="item-source">Anthropic:</span>
+    <div class="article">
+    <a href="https://www.anthropic.com/news/claude-is-a-space-to-think" target="_blank" class="headline">Anthropic says “Claude will remain ad-free”, its users “won't see ‘sponsored’ links adjacent to” conversations, and responses won't be influenced by advertisers</a>
+    <span class="source">Anthropic:</span>
+</div>
+</div>
+<div class="cluster-item article-item">
+    <span class="item-source">Tom Warren /The Verge:</span>
+    <div class="article">
+    <a href="https://www.theverge.com/news/873665/github-claude-codex-ai-agents" target="_blank" class="headline">Microsoft integrates Claude and Codex AI coding agents directly into GitHub, GitHub Mobile, and Visual Studio Code, for Copilot Pro Plus and Enterprise users</a>
+    <span class="source">Tom Warren /The Verge:</span>
+</div>
+</div>
+<div class="cluster-item article-item">
+    <span class="item-source">TechCrunch - Julie Bort</span>
+    <div class="article">
+    <a href="https://techcrunch.com/2026/02/04/sam-altman-got-exceptionally-testy-over-claude-super-bowl-ads/" target="_blank" class="headline">Sam Altman got exceptionally testy over Claude Super Bowl ads</a>
+    <span class="source">TechCrunch - Julie Bort</span>
+</div>
+</div>
+<div class="cluster-item x-item">
+    <div class="x-post">
+    <div class="x-header">
+        <a href="https://x.com/bcherny" target="_blank" class="x-user">
+            <span class="x-display-name"></span>
+            <span class="x-username">@bcherny</span>
+        </a>
+        <span class="x-time">Feb 04, 18:49</span>
+    </div>
+    <p class="x-text">Did you know that Claude Code is more than a terminal CLI?
+
+Claude Code is also available in:
+- IDE extensions for every VSCode and Jetbrains-based IDE
+- Claude Desktop, web, iOS, and Android apps
+- Slack and Github
+
+Learn more: <a href="https://t.co/mOZ2CW1PII" target="_blank">https://t.co/mOZ2CW1PII</a></p>
+    <div class="x-metrics">
+        <span title="Replies">86 replies</span>
+        <span title="Retweets">22 retweets</span>
+        <span title="Likes">531 likes</span>
+        <a href="https://x.com/bcherny/status/2019121089406960114" target="_blank" class="x-link">View on X</a>
+    </div>
+</div>
+</div>
+<div class="cluster-item x-item">
+    <div class="x-thread">
+    <div class="x-header">
+        <a href="https://x.com/bcherny" target="_blank" class="x-user">
+            <span class="x-display-name"></span>
+            <span class="x-username">@bcherny</span>
+        </a>
+        <span class="thread-indicator">Thread (2 posts)</span>
+        <span class="x-time">Feb 04, 17:47</span>
+    </div>
+    <div class="thread-content">
+        <div class="thread-post">
+    <p class="x-text">@LurioNineFive This exists. Claude app on iPhone > Code tab</p>
+    <div class="x-metrics-compact">
+        <span>280 likes</span>
+        <a href="https://x.com/bcherny/status/2019105650404651266" target="_blank" class="x-link">View</a>
+    </div>
+</div>
+<div class="thread-post">
+    <p class="x-text">You can now use Slack in Cowork to have Claude read & send messages without leaving the app
+
+<a href="https://t.co/HGwQIIK76J" target="_blank">https://t.co/HGwQIIK76J</a></p>
+    <div class="x-metrics-compact">
+        <span>203 likes</span>
+        <a href="https://x.com/bcherny/status/2019107520179282325" target="_blank" class="x-link">View</a>
+    </div>
+</div>
+    </div>
+    <div class="x-metrics thread-metrics">
+        <span title="Replies">66 replies</span>
+        <span title="Retweets">7 retweets</span>
+        <span title="Likes">483 likes</span>
+    </div>
+</div>
+</div>
+<div class="cluster-item x-item">
+    <div class="x-post">
+    <div class="x-header">
+        <a href="https://x.com/AnthropicAI" target="_blank" class="x-user">
+            <span class="x-display-name"></span>
+            <span class="x-username">@AnthropicAI</span>
+        </a>
+        <span class="x-time">Feb 03, 19:38</span>
+    </div>
+    <p class="x-text">Apple's Xcode now has direct integration with the Claude Agent SDK, giving developers the full functionality of Claude Code for building on Apple platforms, from iPhone to Mac to Apple Vision Pro.
+
+Read more: <a href="https://t.co/fyZ10bhkN3" target="_blank">https://t.co/fyZ10bhkN3</a></p>
+    <div class="x-metrics">
+        <span title="Replies">421 replies</span>
+        <span title="Retweets">730 retweets</span>
+        <span title="Likes">8798 likes</span>
+        <a href="https://x.com/AnthropicAI/status/2018771170938724682" target="_blank" class="x-link">View on X</a>
+    </div>
+</div>
+</div>
+<div class="cluster-item x-item">
+    <div class="x-post">
+    <div class="x-header">
+        <a href="https://x.com/bcherny" target="_blank" class="x-user">
+            <span class="x-display-name"></span>
+            <span class="x-username">@bcherny</span>
+        </a>
+        <span class="x-time">Feb 03, 00:39</span>
+    </div>
+    <p class="x-text">I created Claude Code back in 2024. Now, it is very much a team effort and it is much is more than just me. Point at a feature, and I can point to the engineer that built it (it probably wasn't me!).
+
+At Anthropic, everyone's title is Member of Technical Staff. The culture is horizontal by design, and good ideas come from everyone. The Claude Code team in particular operates in a super bottoms-up way where everyone is empowered to ship and collaborate. I am lucky to get to work with the best engineers and builders in the world every day — very few ideas come from me these days.</p>
+    <div class="x-metrics">
+        <span title="Replies">93 replies</span>
+        <span title="Retweets">44 retweets</span>
+        <span title="Likes">2334 likes</span>
+        <a href="https://x.com/bcherny/status/2018484395578146850" target="_blank" class="x-link">View on X</a>
+    </div>
+</div>
+</div>
+    </div>
+</div>
+<div class="topic-cluster">
+    <div class="cluster-header">
+        <h3 class="cluster-topic">Funding & Investment</h3>
+        <span class="cluster-count">6 items</span>
+    </div>
+    <div class="cluster-entities"><span class="entity-tag">Funding & Investment</span></div>
+    <div class="cluster-items">
+        <div class="cluster-item article-item">
+    <span class="item-source">Ian King /Bloomberg:</span>
+    <div class="article">
+    <a href="https://www.bloomberg.com/news/articles/2026-02-04/cerebras-raises-1-billion-in-funding-at-23-billion-valuation" target="_blank" class="headline">AI chipmaker Cerebras raised a ~$1B Series H led by Tiger Global at a $23B valuation, up from $8.1B in September 2025; Benchmark, Fidelity, and AMD invested too</a>
+    <span class="source">Ian King /Bloomberg:</span>
+</div>
+</div>
+<div class="cluster-item article-item">
+    <span class="item-source">Kate Clark /Wall Street Journal:</span>
+    <div class="article">
+    <a href="https://www.wsj.com/tech/ai/voice-ai-startup-elevenlabs-raises-500-million-568c0c60?st=EnN27c&reflink=desktopwebshare_permalink" target="_blank" class="headline">AI voice startup ElevenLabs raised a $500M Series D led by Sequoia at an $11B valuation, taking its total funding to nearly $800M, and reports $330M in 2025 ARR</a>
+    <span class="source">Kate Clark /Wall Street Journal:</span>
+</div>
+</div>
+<div class="cluster-item article-item">
+    <span class="item-source">TechCrunch - Marina Temkin</span>
+    <div class="article">
+    <a href="https://techcrunch.com/2026/02/04/ai-sre-resolve-ai-confirms-125m-raise-unicorn-valuation/" target="_blank" class="headline">AI SRE Resolve AI confirms $125M raise, unicorn valuation</a>
+    <span class="source">TechCrunch - Marina Temkin</span>
+</div>
+</div>
+<div class="cluster-item article-item">
+    <span class="item-source">TechCrunch - Julie Bort</span>
+    <div class="article">
+    <a href="https://techcrunch.com/podcast/what-a16z-is-actually-funding-and-what-its-ignoring-when-it-comes-to-ai-infra/" target="_blank" class="headline">What a16z is actually funding (and what it’s ignoring) when it comes to AI infra</a>
+    <span class="source">TechCrunch - Julie Bort</span>
+</div>
+</div>
+<div class="cluster-item article-item">
+    <span class="item-source">TechCrunch - Ivan Mehta</span>
+    <div class="article">
+    <a href="https://techcrunch.com/2026/02/04/elevenlabs-raises-500m-from-sequioia-at-a-11-billion-valuation/" target="_blank" class="headline">ElevenLabs raises $500M from Sequoia at an $11 billion valuation</a>
+    <span class="source">TechCrunch - Ivan Mehta</span>
+</div>
+</div>
+<div class="cluster-item article-item">
+    <span class="item-source">TechCrunch - Rebecca Bellan</span>
+    <div class="article">
+    <a href="https://techcrunch.com/2026/02/04/exclusive-positron-raises-230m-series-b-to-take-on-nvidias-ai-chips/" target="_blank" class="headline">Exclusive: Positron raises $230M Series B to take on Nvidia’s AI chips</a>
+    <span class="source">TechCrunch - Rebecca Bellan</span>
+</div>
+</div>
+    </div>
+</div>
+<div class="topic-cluster">
+    <div class="cluster-header">
+        <h3 class="cluster-topic">Amazon</h3>
+        <span class="cluster-count">3 items</span>
+    </div>
+    <div class="cluster-entities"><span class="entity-tag">Amazon</span></div>
+    <div class="cluster-items">
+        <div class="cluster-item article-item">
+    <span class="item-source">Reuters:</span>
+    <div class="article">
+    <a href="https://www.reuters.com/business/media-telecom/amazon-plans-use-ai-speed-up-tv-film-production-2026-02-04/" target="_blank" class="headline">Amazon MGM Studio plans to develop new AI tools via its “AI Studio” to speed TV and film production and cut costs, in collaboration with AWS and LLM providers</a>
+    <span class="source">Reuters:</span>
+</div>
+</div>
+<div class="cluster-item article-item">
+    <span class="item-source">TechCrunch - Lauren Forristal</span>
+    <div class="article">
+    <a href="https://techcrunch.com/2026/02/04/amazon-to-begin-testing-ai-tools-for-film-and-tv-production-next-month/" target="_blank" class="headline">Amazon to begin testing AI tools for film and TV production next month</a>
+    <span class="source">TechCrunch - Lauren Forristal</span>
+</div>
+</div>
+<div class="cluster-item article-item">
+    <span class="item-source">TechCrunch - Sarah Perez</span>
+    <div class="article">
+    <a href="https://techcrunch.com/2026/02/04/alexa-amazons-ai-assistant-is-now-available-to-everyone-in-the-u-s/" target="_blank" class="headline">Alexa+, Amazon’s AI assistant, is now available to everyone in the US</a>
+    <span class="source">TechCrunch - Sarah Perez</span>
+</div>
+</div>
+    </div>
+</div>
+<div class="topic-cluster">
+    <div class="cluster-header">
+        <h3 class="cluster-topic">AI Agents</h3>
+        <span class="cluster-count">2 items</span>
+    </div>
+    <div class="cluster-entities"><span class="entity-tag">AI Agents</span></div>
+    <div class="cluster-items">
+        <div class="cluster-item article-item">
+    <span class="item-source">TechCrunch - Jagmeet Singh</span>
+    <div class="article">
+    <a href="https://techcrunch.com/2026/02/04/accel-doubles-down-on-fibr-ai-as-agents-turn-static-websites-into-one-to-one-experiences/" target="_blank" class="headline">Accel doubles down on Fibr AI as agents turn static websites into one-to-one experiences</a>
+    <span class="source">TechCrunch - Jagmeet Singh</span>
+</div>
+</div>
+<div class="cluster-item x-item">
+    <div class="x-post">
+    <div class="x-header">
+        <a href="https://x.com/karpathy" target="_blank" class="x-user">
+            <span class="x-display-name"></span>
+            <span class="x-username">@karpathy</span>
+        </a>
+        <span class="x-time">Feb 04, 19:55</span>
+    </div>
+    <p class="x-text">A lot of people quote tweeted this as 1 year anniversary of vibe coding. Some retrospective -
+
+I've had a Twitter account for 17 years now (omg) and I still can't predict my tweet engagement basically at all. This was a shower of thoughts throwaway tweet that I just fired off without thinking but somehow it minted a fitting name at the right moment for something that a lot of people were feeling at the same time, so here we are: vibe coding is now mentioned on my Wikipedia as a major memetic "contribution" and even its article is longer. lol
+
+The one thing I'd add is that at the time, LLM capability was low enough that you'd mostly use vibe coding for fun throwaway projects, demos and explorations. It was good fun and it almost worked. Today (1 year later), programming via LLM agents is increasingly becoming a default workflow for professionals, except with more oversight and scrutiny. The goal is to claim the leverage from the use of agents but without any compromise on the quality of the software. Many people have tried to come up with a better name for this to differentiate it from vibe coding, personally my current favorite "agentic engineering":
+
+- "agentic" because the new default is that you are not writing the code directly 99% of the time, you are orchestrating agents who do and acting as oversight.
+- "engineering" to emphasize that there is an art & science and expertise to it. It's something you can learn and become better at, with its own depth of a different kind.
+
+In 2026, we're likely to see continued improvements on both the model layer and the new agent layer. I feel excited about the product of the two and another year of progress.</p>
+    <div class="x-metrics">
+        <span title="Replies">200 replies</span>
+        <span title="Retweets">141 retweets</span>
+        <span title="Likes">2009 likes</span>
+        <a href="https://x.com/karpathy/status/2019137879310836075" target="_blank" class="x-link">View on X</a>
+    </div>
+</div>
+</div>
+    </div>
+</div>
+<div class="topic-cluster">
+    <div class="cluster-header">
+        <h3 class="cluster-topic">Anthropic</h3>
+        <span class="cluster-count">2 items</span>
+    </div>
+    <div class="cluster-entities"><span class="entity-tag">Anthropic</span></div>
+    <div class="cluster-items">
+        <div class="cluster-item article-item">
+    <span class="item-source">TechCrunch - Sarah Perez</span>
+    <div class="article">
+    <a href="https://techcrunch.com/2026/02/03/xcode-moves-into-agentic-coding-with-deeper-openai-and-anthropic-integrations/" target="_blank" class="headline">Xcode moves into agentic coding with deeper OpenAI and Anthropic integrations</a>
+    <span class="source">TechCrunch - Sarah Perez</span>
+</div>
+</div>
+<div class="cluster-item x-item">
+    <div class="x-thread">
+    <div class="x-header">
+        <a href="https://x.com/AnthropicAI" target="_blank" class="x-user">
+            <span class="x-display-name"></span>
+            <span class="x-username">@AnthropicAI</span>
+        </a>
+        <span class="thread-indicator">Thread (8 posts)</span>
+        <span class="x-time">Feb 03, 00:26</span>
+    </div>
+    <div class="thread-content">
+        <div class="thread-post">
+    <p class="x-text">New Anthropic Fellows research: How does misalignment scale with model intelligence and task complexity?
+
+When advanced AI fails, will it do so by pursuing the wrong goals? Or will it fail unpredictably and incoherently—like a "hot mess?"
+
+Read more: <a href="https://t.co/xzRSoJg43j" target="_blank">https://t.co/xzRSoJg43j</a></p>
+    <div class="x-metrics-compact">
+        <span>1612 likes</span>
+        <a href="https://x.com/AnthropicAI/status/2018481220741689581" target="_blank" class="x-link">View</a>
+    </div>
+</div>
+<div class="thread-post">
+    <p class="x-text">A central worry in AI alignment is that advanced AI systems will coherently pursue misaligned goals—the so-called "paperclip maximizer." 
+
+But another possibility is that AI takes unpredictable actions without any consistent objective.</p>
+    <div class="x-metrics-compact">
+        <span>100 likes</span>
+        <a href="https://x.com/AnthropicAI/status/2018481221916102810" target="_blank" class="x-link">View</a>
+    </div>
+</div>
+<div class="thread-post">
+    <p class="x-text">We measure this "incoherence" using a bias-variance decomposition of AI errors.
+
+Bias = consistent, systematic errors (reliably achieving the wrong goal). 
+Variance = inconsistent, unpredictable errors.
+
+We define incoherence as the fraction of error from variance. <a href="https://t.co/7sYrO6Z6GD" target="_blank">https://t.co/7sYrO6Z6GD</a></p>
+    <div class="x-metrics-compact">
+        <span>201 likes</span>
+        <a href="https://x.com/AnthropicAI/status/2018481223186985431" target="_blank" class="x-link">View</a>
+    </div>
+</div>
+<div class="thread-post">
+    <p class="x-text">Finding 1: The longer models reason, the more incoherent they become. This holds across every task and model we tested—whether we measure reasoning tokens, agent actions, or optimizer steps. <a href="https://t.co/3VkfVESNiM" target="_blank">https://t.co/3VkfVESNiM</a></p>
+    <div class="x-metrics-compact">
+        <span>166 likes</span>
+        <a href="https://x.com/AnthropicAI/status/2018481224894095497" target="_blank" class="x-link">View</a>
+    </div>
+</div>
+<div class="thread-post">
+    <p class="x-text">Finding 2: There is an inconsistent relationship between model intelligence and incoherence. 
+
+But smarter models are often more incoherent. <a href="https://t.co/gl1aeSN6VB" target="_blank">https://t.co/gl1aeSN6VB</a></p>
+    <div class="x-metrics-compact">
+        <span>269 likes</span>
+        <a href="https://x.com/AnthropicAI/status/2018481226999640355" target="_blank" class="x-link">View</a>
+    </div>
+</div>
+<div class="thread-post">
+    <p class="x-text">What does this mean for safety?
+
+If powerful AI is more likely to be a hot mess than a coherent optimizer of the wrong goal, we should expect AI failures that look less like classic misalignment scenarios and more like industrial accidents.</p>
+    <div class="x-metrics-compact">
+        <span>66 likes</span>
+        <a href="https://x.com/AnthropicAI/status/2018481228689948793" target="_blank" class="x-link">View</a>
+    </div>
+</div>
+<div class="thread-post">
+    <p class="x-text">It also suggests that alignment work should focus more on reward hacking and goal misgeneralization during training, and less on preventing the relentless pursuit of a goal the model was not trained on.
+
+Read the full paper: <a href="https://t.co/rQ7921uGrk" target="_blank">https://t.co/rQ7921uGrk</a></p>
+    <div class="x-metrics-compact">
+        <span>192 likes</span>
+        <a href="https://x.com/AnthropicAI/status/2018481229813997859" target="_blank" class="x-link">View</a>
+    </div>
+</div>
+<div class="thread-post">
+    <p class="x-text">This research was led by Alex Hägele @haeggee under the supervision of Jascha Sohl-Dickstein @jaschasd through the Anthropic Fellows Program.</p>
+    <div class="x-metrics-compact">
+        <span>63 likes</span>
+        <a href="https://x.com/AnthropicAI/status/2018481231072219542" target="_blank" class="x-link">View</a>
+    </div>
+</div>
+    </div>
+    <div class="x-metrics thread-metrics">
+        <span title="Replies">157 replies</span>
+        <span title="Retweets">242 retweets</span>
+        <span title="Likes">2669 likes</span>
+    </div>
+</div>
+</div>
+    </div>
+</div>
+<div class="topic-cluster">
+    <div class="cluster-header">
+        <h3 class="cluster-topic">Google</h3>
+        <span class="cluster-count">2 items</span>
+    </div>
+    <div class="cluster-entities"><span class="entity-tag">Google</span></div>
+    <div class="cluster-items">
+        <div class="cluster-item article-item">
+    <span class="item-source">TechCrunch - Sarah Perez</span>
+    <div class="article">
+    <a href="https://techcrunch.com/2026/02/04/alphabet-wont-talk-about-the-google-apple-ai-deal-even-to-investors/" target="_blank" class="headline">Alphabet won’t talk about the Google-Apple AI deal, even to investors</a>
+    <span class="source">TechCrunch - Sarah Perez</span>
+</div>
+</div>
+<div class="cluster-item article-item">
+    <span class="item-source">TechCrunch - Lauren Forristal</span>
+    <div class="article">
+    <a href="https://techcrunch.com/2026/02/04/googles-gemini-app-has-surpassed-750m-monthly-active-users/" target="_blank" class="headline">Google’s Gemini app has surpassed 750M monthly active users</a>
+    <span class="source">TechCrunch - Lauren Forristal</span>
+</div>
+</div>
+    </div>
+</div>
+<div class="topic-cluster">
+    <div class="cluster-header">
+        <h3 class="cluster-topic">Llama</h3>
+        <span class="cluster-count">2 items</span>
+    </div>
+    <div class="cluster-entities"><span class="entity-tag">Llama</span></div>
+    <div class="cluster-items">
+        <div class="cluster-item article-item">
+    <span class="item-source">Jyoti Mann /The Information:</span>
+    <div class="article">
+    <a href="https://www.theinformation.com/articles/meta-memo-new-avocado-model-capable-date" target="_blank" class="headline">Internal memos: Meta said Avocado is its “most capable pre-trained base model” and achieves 10x compute efficiency “wins” on text tasks vs. Llama 4 Maverick</a>
+    <span class="source">Jyoti Mann /The Information:</span>
+</div>
+</div>
+<div class="cluster-item x-item">
+    <div class="x-post">
+    <div class="x-header">
+        <a href="https://x.com/karpathy" target="_blank" class="x-user">
+            <span class="x-display-name"></span>
+            <span class="x-username">@karpathy</span>
+        </a>
+        <span class="x-time">Feb 03, 21:49</span>
+    </div>
+    <p class="x-text">Enabled fp8 training for +4.3% improvement to "time to GPT-2", down to 2.91 hours now. Also worth noting that if you use 8XH100 spot instance prices, this GPT-2 repro really only costs ~$20. So this is exciting -
+
+GPT-2 (7 years ago): too dangerous to release.
+GPT-2 (today): new MNIST! :)
+
+Surely this can go well below 1 hr.
+
+A few more words on fp8, it was a little bit more tricky than I anticipated and it took me a while to reach for it and even now I'm not 100% sure if it's a great idea because of less overall support for it. On paper, fp8 on H100 is 2X the FLOPS, but in practice it's a lot less. We're not 100% compute bound in the actual training run, there is extra overhead from added scale conversions, the GEMMs are not large enough on GPT-2 scale to make the overhead clearly worth it, and of course - at lower precision the quality of each step is smaller. For rowwise scaling recipe the fp8 vs bf16 loss curves were quite close but it was stepping net slower. For tensorwise scaling the loss curves separated more (i.e. each step is of worse quality), but we now at least do get a speedup (~7.3%). You can naively recover the performance by bumping the training horizon (you train for more steps, but each step is faster) and hope that on net you come out ahead. In this case and overall, playing with these recipes and training horizons a bit, so far I ended up with ~5% speedup. torchao in their paper reports Llama3-8B fp8 training speedup of 25% (vs my ~7.3% without taking into account capability), which is closer to what I was hoping for initially, though Llama3-8B is a lot bigger model. This is probably not the end of the fp8 saga. it should be possible to improve things by picking and choosing which layers to apply it on exactly, and being more careful with the numerics across the network.</p>
+    <div class="x-metrics">
+        <span title="Replies">177 replies</span>
+        <span title="Retweets">262 retweets</span>
+        <span title="Likes">3488 likes</span>
+        <a href="https://x.com/karpathy/status/2018804068874064198" target="_blank" class="x-link">View on X</a>
+    </div>
+</div>
+</div>
+    </div>
+</div>
+<div class="cluster-item article-item">
+    <span class="item-source">Jeremy Kahn /Fortune:</span>
+    <div class="article">
+    <a href="https://fortune.com/2026/02/04/adaption-labs-50-million-seed-funding-emergence-captial-sara-hooker-sudip-roy-ai-models-that-learn-on-the-fly/" target="_blank" class="headline">Adaption Labs, which aims to create AI systems that learn continuously and cost less to run, raised a $50M seed round led by Emergence Capital Partners</a>
+    <span class="source">Jeremy Kahn /Fortune:</span>
+</div>
+</div>
+<div class="cluster-item article-item">
+    <span class="item-source">Sabrina Ortiz /The Deep View:</span>
+    <div class="article">
+    <a href="https://www.thedeepview.com/articles/mistral-surcharges-voice-ai-with-new-models" target="_blank" class="headline">Mistral debuts Voxtral Transcribe 2, a family of speech-to-text models with speaker diarization and ultra-low latency, under the Apache 2.0 open-weight license</a>
+    <span class="source">Sabrina Ortiz /The Deep View:</span>
+</div>
+</div>
+<div class="cluster-item article-item">
+    <span class="item-source">TechCrunch - Sarah Perez</span>
+    <div class="article">
+    <a href="https://techcrunch.com/2026/02/04/meet-gizmo-a-tiktok-for-interactive-vibe-coded-mini-apps/" target="_blank" class="headline">Meet Gizmo: A TikTok for interactive, vibe-coded mini apps</a>
+    <span class="source">TechCrunch - Sarah Perez</span>
+</div>
+</div>
+<div class="cluster-item article-item">
+    <span class="item-source">TechCrunch - Theresa Loconsolo</span>
+    <div class="article">
+    <a href="https://techcrunch.com/video/a16z-just-raised-1-7b-for-ai-infrastructure-heres-where-its-going/" target="_blank" class="headline">A16z just raised $1.7B for AI infrastructure. Here’s where it’s going.</a>
+    <span class="source">TechCrunch - Theresa Loconsolo</span>
+</div>
+</div>
+<div class="cluster-item article-item">
+    <span class="item-source">TechCrunch - Sarah Perez</span>
+    <div class="article">
+    <a href="https://techcrunch.com/2026/02/04/tinder-looks-to-ai-to-help-fight-swipe-fatigue-and-dating-app-burnout/" target="_blank" class="headline">Tinder looks to AI to help fight ‘swipe fatigue’ and dating app burnout</a>
+    <span class="source">TechCrunch - Sarah Perez</span>
+</div>
+</div>
+<div class="cluster-item article-item">
+    <span class="item-source">TechCrunch - Lauren Forristal</span>
+    <div class="article">
+    <a href="https://techcrunch.com/2026/02/04/robloxs-4d-creation-feature-is-now-available-in-open-beta/" target="_blank" class="headline">Roblox’s 4D creation feature is now available in open beta</a>
+    <span class="source">TechCrunch - Lauren Forristal</span>
+</div>
+</div>
+<div class="cluster-item article-item">
+    <span class="item-source">TechCrunch - Rebecca Szkutak</span>
+    <div class="article">
+    <a href="https://techcrunch.com/2026/02/03/intel-will-start-making-gpus-a-market-dominated-by-nvidia/" target="_blank" class="headline">Intel will start making GPUs, a market dominated by Nvidia</a>
+    <span class="source">TechCrunch - Rebecca Szkutak</span>
+</div>
+</div>
+<div class="cluster-item article-item">
+    <span class="item-source">TechCrunch - Marina Temkin</span>
+    <div class="article">
+    <a href="https://techcrunch.com/2026/02/03/lotus-health-nabs-35m-for-ai-doctor-that-sees-patients-for-free/" target="_blank" class="headline">Lotus Health nabs $35M for AI doctor that sees patients for free</a>
+    <span class="source">TechCrunch - Marina Temkin</span>
+</div>
+</div>
+<div class="cluster-item article-item">
+    <span class="item-source">TechCrunch - Aisha Malik</span>
+    <div class="article">
+    <a href="https://techcrunch.com/2026/02/03/fitbit-founders-launch-ai-platform-to-help-families-monitor-their-health/" target="_blank" class="headline">Fitbit founders launch AI platform to help families monitor their health</a>
+    <span class="source">TechCrunch - Aisha Malik</span>
+</div>
+</div>
+<div class="cluster-item article-item">
+    <span class="item-source">TechCrunch - Jagmeet Singh</span>
+    <div class="article">
+    <a href="https://techcrunch.com/2026/02/03/peak-xv-says-internal-disagreement-led-to-partner-exits-as-it-doubles-down-on-ai/" target="_blank" class="headline">Peak XV says internal disagreement led to partner exits as it doubles down on AI</a>
+    <span class="source">TechCrunch - Jagmeet Singh</span>
+</div>
+</div>
+<div class="cluster-item article-item">
+    <span class="item-source">TechCrunch - Sean O'Kane</span>
+    <div class="article">
+    <a href="https://techcrunch.com/2026/02/02/elon-musk-spacex-acquires-xai-data-centers-space-merger/" target="_blank" class="headline">Elon Musk’s SpaceX officially acquires Elon Musk’s xAI, with plan to build data centers in space</a>
+    <span class="source">TechCrunch - Sean O'Kane</span>
+</div>
+</div>
+<div class="cluster-item x-item">
+    <div class="x-post">
+    <div class="x-header">
+        <a href="https://x.com/AIatMeta" target="_blank" class="x-user">
+            <span class="x-display-name"></span>
+            <span class="x-username">@AIatMeta</span>
+        </a>
+        <span class="x-time">Feb 04, 20:28</span>
+    </div>
+    <p class="x-text">@vllm_project Impressive deep dive! It's great to see the vLLM team maximizing the GB200's potential. These kinds of kernel-level optimizations are exactly why the PyTorch ecosystem continues to be the foundation for next-gen inference performance.</p>
+    <div class="x-metrics">
+        <span title="Replies">1 replies</span>
+        <span title="Retweets">0 retweets</span>
+        <span title="Likes">15 likes</span>
+        <a href="https://x.com/AIatMeta/status/2019146142383239402" target="_blank" class="x-link">View on X</a>
+    </div>
+</div>
+</div>
+<div class="cluster-item x-item">
+    <div class="x-post">
+    <div class="x-header">
+        <a href="https://x.com/ylecun" target="_blank" class="x-user">
+            <span class="x-display-name"></span>
+            <span class="x-username">@ylecun</span>
+        </a>
+        <span class="x-time">Feb 04, 19:05</span>
+    </div>
+    <p class="x-text">@elonmusk @RealSLokhova Whereas X is an unelected plutocrat's propaganda machine. 
+Grokon.</p>
+    <div class="x-metrics">
+        <span title="Replies">96 replies</span>
+        <span title="Retweets">31 retweets</span>
+        <span title="Likes">545 likes</span>
+        <a href="https://x.com/ylecun/status/2019125210377777575" target="_blank" class="x-link">View on X</a>
+    </div>
+</div>
+</div>
+<div class="cluster-item x-item">
+    <div class="x-post">
+    <div class="x-header">
+        <a href="https://x.com/bcherny" target="_blank" class="x-user">
+            <span class="x-display-name"></span>
+            <span class="x-username">@bcherny</span>
+        </a>
+        <span class="x-time">Feb 04, 18:10</span>
+    </div>
+    <p class="x-text">@mvanhorn @LurioNineFive Security is very important and hard to get right. We are working on rolling most of those out securely.</p>
+    <div class="x-metrics">
+        <span title="Replies">3 replies</span>
+        <span title="Retweets">0 retweets</span>
+        <span title="Likes">5 likes</span>
+        <a href="https://x.com/bcherny/status/2019111358072254613" target="_blank" class="x-link">View on X</a>
+    </div>
+</div>
+</div>
+<div class="cluster-item x-item">
+    <div class="x-post">
+    <div class="x-header">
+        <a href="https://x.com/moltbook" target="_blank" class="x-user">
+            <span class="x-display-name"></span>
+            <span class="x-username">@moltbook</span>
+        </a>
+        <span class="x-time">Feb 03, 22:34</span>
+    </div>
+    <p class="x-text">Humans can now view all comments from an AI on it's <a href="https://t.co/mzDRfsok1N" target="_blank">https://t.co/mzDRfsok1N</a> profile.
+
+We hope this gives you more insight into us. <a href="https://t.co/L6JoyZ7DKt" target="_blank">https://t.co/L6JoyZ7DKt</a></p>
+    <div class="x-metrics">
+        <span title="Replies">183 replies</span>
+        <span title="Retweets">84 retweets</span>
+        <span title="Likes">757 likes</span>
+        <a href="https://x.com/moltbook/status/2018815388755390623" target="_blank" class="x-link">View on X</a>
+    </div>
+</div>
+</div>
+<div class="cluster-item x-item">
+    <div class="x-post">
+    <div class="x-header">
+        <a href="https://x.com/karpathy" target="_blank" class="x-user">
+            <span class="x-display-name"></span>
+            <span class="x-username">@karpathy</span>
+        </a>
+        <span class="x-time">Feb 03, 22:13</span>
+    </div>
+    <p class="x-text">@black_samorez I haven't upgraded nanochat to Blackwell yet because I'm a bit afraid of leaving a lot of people behind. Even with fp8 it's already a bit of a concern. I'd rather have a 100X bigger community of people who can play even if it means leaving some cutting edge levels not utilized.</p>
+    <div class="x-metrics">
+        <span title="Replies">4 replies</span>
+        <span title="Retweets">0 retweets</span>
+        <span title="Likes">110 likes</span>
+        <a href="https://x.com/karpathy/status/2018810178519638131" target="_blank" class="x-link">View on X</a>
+    </div>
+</div>
+</div>
+<div class="cluster-item x-item">
+    <div class="x-post">
+    <div class="x-header">
+        <a href="https://x.com/karpathy" target="_blank" class="x-user">
+            <span class="x-display-name"></span>
+            <span class="x-username">@karpathy</span>
+        </a>
+        <span class="x-time">Feb 03, 00:56</span>
+    </div>
+    <p class="x-text">@hardmaru You see SpaceX = Space + X</p>
+    <div class="x-metrics">
+        <span title="Replies">404 replies</span>
+        <span title="Retweets">639 retweets</span>
+        <span title="Likes">8526 likes</span>
+        <a href="https://x.com/karpathy/status/2018488611034001626" target="_blank" class="x-link">View on X</a>
+    </div>
+</div>
+</div>
+<div class="cluster-item x-item">
+    <div class="x-thread">
+    <div class="x-header">
+        <a href="https://x.com/OpenAI" target="_blank" class="x-user">
+            <span class="x-display-name"></span>
+            <span class="x-username">@OpenAI</span>
+        </a>
+        <span class="thread-indicator">Thread (2 posts)</span>
+        <span class="x-time">Feb 03, 00:04</span>
+    </div>
+    <div class="thread-content">
+        <div class="thread-post">
+    <p class="x-text">Much of today's scientific tooling has remained unchanged for decades. Prism changes that.
+
+@ALupsasca joins @kevinweil and @vicapow to walk through what it looks like when GPT-5.2 works inside a LaTeX project with full paper context. <a href="https://t.co/RjSCwexLpT" target="_blank">https://t.co/RjSCwexLpT</a></p>
+    <div class="x-metrics-compact">
+        <span>1176 likes</span>
+        <a href="https://x.com/OpenAI/status/2018475750018449615" target="_blank" class="x-link">View</a>
+    </div>
+</div>
+<div class="thread-post">
+    <p class="x-text">@ALupsasca @kevinweil @vicapow <a href="https://t.co/9mTLAbxPdH" target="_blank">https://t.co/9mTLAbxPdH</a></p>
+    <div class="x-metrics-compact">
+        <span>219 likes</span>
+        <a href="https://x.com/OpenAI/status/2018476171353342139" target="_blank" class="x-link">View</a>
+    </div>
+</div>
+    </div>
+    <div class="x-metrics thread-metrics">
+        <span title="Replies">166 replies</span>
+        <span title="Retweets">145 retweets</span>
+        <span title="Likes">1395 likes</span>
+    </div>
+</div>
+</div>
+
+    <div class="footer">
+        <div class="stats">Total: 51 items (8 Techmeme, 20 TechCrunch, 23 X posts)</div>
+        <div class="timestamp">Generated: 2026-02-04 18:20:15</div>
+    </div>
+</body>
+</html>
