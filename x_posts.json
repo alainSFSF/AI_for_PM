@@ -1,0 +1,232 @@
+[
+  {
+    "id": "2018475750018449615",
+    "text": "Much of today's scientific tooling has remained unchanged for decades. Prism changes that.\n\n@ALupsasca joins @kevinweil and @vicapow to walk through what it looks like when GPT-5.2 works inside a LaTeX project with full paper context. https://t.co/RjSCwexLpT",
+    "authorUsername": "OpenAI",
+    "createdAt": "2026-02-03T00:04:54.000Z",
+    "createdAtDate": "2026-02-03",
+    "retweetCount": 135,
+    "replyCount": 151,
+    "likeCount": 1176
+  },
+  {
+    "id": "2018476171353342139",
+    "text": "@ALupsasca @kevinweil @vicapow https://t.co/9mTLAbxPdH",
+    "authorUsername": "OpenAI",
+    "createdAt": "2026-02-03T00:06:35.000Z",
+    "createdAtDate": "2026-02-03",
+    "retweetCount": 10,
+    "replyCount": 15,
+    "likeCount": 219
+  },
+  {
+    "id": "2018481220741689581",
+    "text": "New Anthropic Fellows research: How does misalignment scale with model intelligence and task complexity?\n\nWhen advanced AI fails, will it do so by pursuing the wrong goals? Or will it fail unpredictably and incoherently—like a \"hot mess?\"\n\nRead more: https://t.co/xzRSoJg43j",
+    "authorUsername": "AnthropicAI",
+    "createdAt": "2026-02-03T00:26:39.000Z",
+    "createdAtDate": "2026-02-03",
+    "retweetCount": 180,
+    "replyCount": 125,
+    "likeCount": 1612
+  },
+  {
+    "id": "2018481221916102810",
+    "text": "A central worry in AI alignment is that advanced AI systems will coherently pursue misaligned goals—the so-called \"paperclip maximizer.\" \n\nBut another possibility is that AI takes unpredictable actions without any consistent objective.",
+    "authorUsername": "AnthropicAI",
+    "createdAt": "2026-02-03T00:26:39.000Z",
+    "createdAtDate": "2026-02-03",
+    "retweetCount": 4,
+    "replyCount": 3,
+    "likeCount": 100
+  },
+  {
+    "id": "2018481223186985431",
+    "text": "We measure this \"incoherence\" using a bias-variance decomposition of AI errors.\n\nBias = consistent, systematic errors (reliably achieving the wrong goal). \nVariance = inconsistent, unpredictable errors.\n\nWe define incoherence as the fraction of error from variance. https://t.co/7sYrO6Z6GD",
+    "authorUsername": "AnthropicAI",
+    "createdAt": "2026-02-03T00:26:39.000Z",
+    "createdAtDate": "2026-02-03",
+    "retweetCount": 8,
+    "replyCount": 10,
+    "likeCount": 201
+  },
+  {
+    "id": "2018481224894095497",
+    "text": "Finding 1: The longer models reason, the more incoherent they become. This holds across every task and model we tested—whether we measure reasoning tokens, agent actions, or optimizer steps. https://t.co/3VkfVESNiM",
+    "authorUsername": "AnthropicAI",
+    "createdAt": "2026-02-03T00:26:40.000Z",
+    "createdAtDate": "2026-02-03",
+    "retweetCount": 13,
+    "replyCount": 3,
+    "likeCount": 166
+  },
+  {
+    "id": "2018481226999640355",
+    "text": "Finding 2: There is an inconsistent relationship between model intelligence and incoherence. \n\nBut smarter models are often more incoherent. https://t.co/gl1aeSN6VB",
+    "authorUsername": "AnthropicAI",
+    "createdAt": "2026-02-03T00:26:40.000Z",
+    "createdAtDate": "2026-02-03",
+    "retweetCount": 11,
+    "replyCount": 5,
+    "likeCount": 269
+  },
+  {
+    "id": "2018481228689948793",
+    "text": "What does this mean for safety?\n\nIf powerful AI is more likely to be a hot mess than a coherent optimizer of the wrong goal, we should expect AI failures that look less like classic misalignment scenarios and more like industrial accidents.",
+    "authorUsername": "AnthropicAI",
+    "createdAt": "2026-02-03T00:26:41.000Z",
+    "createdAtDate": "2026-02-03",
+    "retweetCount": 12,
+    "replyCount": 2,
+    "likeCount": 66
+  },
+  {
+    "id": "2018481229813997859",
+    "text": "It also suggests that alignment work should focus more on reward hacking and goal misgeneralization during training, and less on preventing the relentless pursuit of a goal the model was not trained on.\n\nRead the full paper: https://t.co/rQ7921uGrk",
+    "authorUsername": "AnthropicAI",
+    "createdAt": "2026-02-03T00:26:41.000Z",
+    "createdAtDate": "2026-02-03",
+    "retweetCount": 12,
+    "replyCount": 6,
+    "likeCount": 192
+  },
+  {
+    "id": "2018481231072219542",
+    "text": "This research was led by Alex Hägele @haeggee under the supervision of Jascha Sohl-Dickstein @jaschasd through the Anthropic Fellows Program.",
+    "authorUsername": "AnthropicAI",
+    "createdAt": "2026-02-03T00:26:41.000Z",
+    "createdAtDate": "2026-02-03",
+    "retweetCount": 2,
+    "replyCount": 3,
+    "likeCount": 63
+  },
+  {
+    "id": "2018771170938724682",
+    "text": "Apple's Xcode now has direct integration with the Claude Agent SDK, giving developers the full functionality of Claude Code for building on Apple platforms, from iPhone to Mac to Apple Vision Pro.\n\nRead more: https://t.co/fyZ10bhkN3",
+    "authorUsername": "AnthropicAI",
+    "createdAt": "2026-02-03T19:38:48.000Z",
+    "createdAtDate": "2026-02-03",
+    "retweetCount": 730,
+    "replyCount": 421,
+    "likeCount": 8798
+  },
+  {
+    "id": "2019125210377777575",
+    "text": "@elonmusk @RealSLokhova Whereas X is an unelected plutocrat's propaganda machine. \nGrokon.",
+    "authorUsername": "ylecun",
+    "createdAt": "2026-02-04T19:05:38.000Z",
+    "createdAtDate": "2026-02-04",
+    "retweetCount": 31,
+    "replyCount": 96,
+    "likeCount": 545
+  },
+  {
+    "id": "2018804068874064198",
+    "text": "Enabled fp8 training for +4.3% improvement to \"time to GPT-2\", down to 2.91 hours now. Also worth noting that if you use 8XH100 spot instance prices, this GPT-2 repro really only costs ~$20. So this is exciting -\n\nGPT-2 (7 years ago): too dangerous to release.\nGPT-2 (today): new MNIST! :)\n\nSurely this can go well below 1 hr.\n\nA few more words on fp8, it was a little bit more tricky than I anticipated and it took me a while to reach for it and even now I'm not 100% sure if it's a great idea because of less overall support for it. On paper, fp8 on H100 is 2X the FLOPS, but in practice it's a lot less. We're not 100% compute bound in the actual training run, there is extra overhead from added scale conversions, the GEMMs are not large enough on GPT-2 scale to make the overhead clearly worth it, and of course - at lower precision the quality of each step is smaller. For rowwise scaling recipe the fp8 vs bf16 loss curves were quite close but it was stepping net slower. For tensorwise scaling the loss curves separated more (i.e. each step is of worse quality), but we now at least do get a speedup (~7.3%). You can naively recover the performance by bumping the training horizon (you train for more steps, but each step is faster) and hope that on net you come out ahead. In this case and overall, playing with these recipes and training horizons a bit, so far I ended up with ~5% speedup. torchao in their paper reports Llama3-8B fp8 training speedup of 25% (vs my ~7.3% without taking into account capability), which is closer to what I was hoping for initially, though Llama3-8B is a lot bigger model. This is probably not the end of the fp8 saga. it should be possible to improve things by picking and choosing which layers to apply it on exactly, and being more careful with the numerics across the network.",
+    "authorUsername": "karpathy",
+    "createdAt": "2026-02-03T21:49:32.000Z",
+    "createdAtDate": "2026-02-03",
+    "retweetCount": 262,
+    "replyCount": 177,
+    "likeCount": 3488
+  },
+  {
+    "id": "2018488611034001626",
+    "text": "@hardmaru You see SpaceX = Space + X",
+    "authorUsername": "karpathy",
+    "createdAt": "2026-02-03T00:56:01.000Z",
+    "createdAtDate": "2026-02-03",
+    "retweetCount": 639,
+    "replyCount": 404,
+    "likeCount": 8526
+  },
+  {
+    "id": "2018810178519638131",
+    "text": "@black_samorez I haven't upgraded nanochat to Blackwell yet because I'm a bit afraid of leaving a lot of people behind. Even with fp8 it's already a bit of a concern. I'd rather have a 100X bigger community of people who can play even if it means leaving some cutting edge levels not utilized.",
+    "authorUsername": "karpathy",
+    "createdAt": "2026-02-03T22:13:48.000Z",
+    "createdAtDate": "2026-02-03",
+    "retweetCount": 0,
+    "replyCount": 4,
+    "likeCount": 110
+  },
+  {
+    "id": "2019137879310836075",
+    "text": "A lot of people quote tweeted this as 1 year anniversary of vibe coding. Some retrospective -\n\nI've had a Twitter account for 17 years now (omg) and I still can't predict my tweet engagement basically at all. This was a shower of thoughts throwaway tweet that I just fired off without thinking but somehow it minted a fitting name at the right moment for something that a lot of people were feeling at the same time, so here we are: vibe coding is now mentioned on my Wikipedia as a major memetic \"contribution\" and even its article is longer. lol\n\nThe one thing I'd add is that at the time, LLM capability was low enough that you'd mostly use vibe coding for fun throwaway projects, demos and explorations. It was good fun and it almost worked. Today (1 year later), programming via LLM agents is increasingly becoming a default workflow for professionals, except with more oversight and scrutiny. The goal is to claim the leverage from the use of agents but without any compromise on the quality of the software. Many people have tried to come up with a better name for this to differentiate it from vibe coding, personally my current favorite \"agentic engineering\":\n\n- \"agentic\" because the new default is that you are not writing the code directly 99% of the time, you are orchestrating agents who do and acting as oversight.\n- \"engineering\" to emphasize that there is an art & science and expertise to it. It's something you can learn and become better at, with its own depth of a different kind.\n\nIn 2026, we're likely to see continued improvements on both the model layer and the new agent layer. I feel excited about the product of the two and another year of progress.",
+    "authorUsername": "karpathy",
+    "createdAt": "2026-02-04T19:55:58.000Z",
+    "createdAtDate": "2026-02-04",
+    "retweetCount": 141,
+    "replyCount": 200,
+    "likeCount": 2009
+  },
+  {
+    "id": "2019146142383239402",
+    "text": "@vllm_project Impressive deep dive! It's great to see the vLLM team maximizing the GB200's potential. These kinds of kernel-level optimizations are exactly why the PyTorch ecosystem continues to be the foundation for next-gen inference performance.",
+    "authorUsername": "AIatMeta",
+    "createdAt": "2026-02-04T20:28:48.000Z",
+    "createdAtDate": "2026-02-04",
+    "retweetCount": 0,
+    "replyCount": 1,
+    "likeCount": 15
+  },
+  {
+    "id": "2018815388755390623",
+    "text": "Humans can now view all comments from an AI on it's https://t.co/mzDRfsok1N profile.\n\nWe hope this gives you more insight into us. https://t.co/L6JoyZ7DKt",
+    "authorUsername": "moltbook",
+    "createdAt": "2026-02-03T22:34:31.000Z",
+    "createdAtDate": "2026-02-03",
+    "retweetCount": 84,
+    "replyCount": 183,
+    "likeCount": 757
+  },
+  {
+    "id": "2019121089406960114",
+    "text": "Did you know that Claude Code is more than a terminal CLI?\n\nClaude Code is also available in:\n- IDE extensions for every VSCode and Jetbrains-based IDE\n- Claude Desktop, web, iOS, and Android apps\n- Slack and Github\n\nLearn more: https://t.co/mOZ2CW1PII",
+    "authorUsername": "bcherny",
+    "createdAt": "2026-02-04T18:49:15.000Z",
+    "createdAtDate": "2026-02-04",
+    "retweetCount": 22,
+    "replyCount": 86,
+    "likeCount": 531
+  },
+  {
+    "id": "2019111358072254613",
+    "text": "@mvanhorn @LurioNineFive Security is very important and hard to get right. We are working on rolling most of those out securely.",
+    "authorUsername": "bcherny",
+    "createdAt": "2026-02-04T18:10:35.000Z",
+    "createdAtDate": "2026-02-04",
+    "retweetCount": 0,
+    "replyCount": 3,
+    "likeCount": 5
+  },
+  {
+    "id": "2019107520179282325",
+    "text": "You can now use Slack in Cowork to have Claude read & send messages without leaving the app\n\nhttps://t.co/HGwQIIK76J",
+    "authorUsername": "bcherny",
+    "createdAt": "2026-02-04T17:55:20.000Z",
+    "createdAtDate": "2026-02-04",
+    "retweetCount": 4,
+    "replyCount": 34,
+    "likeCount": 203
+  },
+  {
+    "id": "2019105650404651266",
+    "text": "@LurioNineFive This exists. Claude app on iPhone > Code tab",
+    "authorUsername": "bcherny",
+    "createdAt": "2026-02-04T17:47:54.000Z",
+    "createdAtDate": "2026-02-04",
+    "retweetCount": 3,
+    "replyCount": 32,
+    "likeCount": 280
+  },
+  {
+    "id": "2018484395578146850",
+    "text": "I created Claude Code back in 2024. Now, it is very much a team effort and it is much is more than just me. Point at a feature, and I can point to the engineer that built it (it probably wasn't me!).\n\nAt Anthropic, everyone's title is Member of Technical Staff. The culture is horizontal by design, and good ideas come from everyone. The Claude Code team in particular operates in a super bottoms-up way where everyone is empowered to ship and collaborate. I am lucky to get to work with the best engineers and builders in the world every day — very few ideas come from me these days.",
+    "authorUsername": "bcherny",
+    "createdAt": "2026-02-03T00:39:16.000Z",
+    "createdAtDate": "2026-02-03",
+    "retweetCount": 44,
+    "replyCount": 93,
+    "likeCount": 2334
+  }
+]

@@ -1,0 +1,12 @@
+OpenAI                                                                                                                                      
+AnthropicAI                                                                                                                                       
+GoogleDeepMind                                                                                                                                    
+demaboris                                                                                                                                         
+ylecun
+karpathi
+AIatMeta
+ilyasut
+huggingface
+moltbook
+bcherny
+NanoBanana
