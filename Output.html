@@ -199,65 +199,94 @@
         }
         /* Topic Cluster Styles */
         .content-summary {
-            background: #e8f4f8;
-            padding: 15px 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
         }
         .content-summary p {
             margin: 0;
-            color: #555;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+        .section-divider {
+            height: 3px;
+            background: linear-gradient(90deg, #e0e0e0 0%, #bbb 50%, #e0e0e0 100%);
+            margin: 40px 0;
+            border-radius: 2px;
         }
         .topic-cluster {
-            background: #fafafa;
-            border: 1px solid #e0e0e0;
-            border-radius: 12px;
-            padding: 20px;
-            margin: 20px 0;
+            background: white;
+            border: none;
+            border-radius: 16px;
+            padding: 25px;
+            margin: 30px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-top: 4px solid #3498db;
+        }
+        .topic-cluster:nth-child(odd) {
+            border-top-color: #9b59b6;
+        }
+        .topic-cluster:nth-child(3n) {
+            border-top-color: #e74c3c;
+        }
+        .topic-cluster:nth-child(4n) {
+            border-top-color: #2ecc71;
         }
         .cluster-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
         }
         .cluster-topic {
             margin: 0;
-            color: #2c3e50;
-            font-size: 1.3em;
+            color: #1a1a1a;
+            font-size: 1.4em;
+            font-weight: 700;
+            letter-spacing: -0.02em;
         }
         .cluster-count {
-            background: #3498db;
+            background: linear-gradient(135deg, #3498db, #2980b9);
             color: white;
-            padding: 4px 12px;
-            border-radius: 15px;
+            padding: 6px 16px;
+            border-radius: 20px;
             font-size: 0.85em;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
         }
         .cluster-entities {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         .entity-tag {
             display: inline-block;
-            background: #ecf0f1;
-            color: #7f8c8d;
-            padding: 3px 10px;
-            border-radius: 12px;
-            font-size: 0.8em;
-            margin-right: 5px;
-            margin-bottom: 5px;
+            background: #f8f9fa;
+            color: #495057;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 0.82em;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            border: 1px solid #e9ecef;
+            font-weight: 500;
         }
         .cluster-items {
-            border-top: 1px solid #e0e0e0;
-            padding-top: 15px;
+            border-top: none;
+            padding-top: 5px;
         }
         .cluster-item {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
         .cluster-item:last-child {
             margin-bottom: 0;
         }
         .cluster-item .article {
             margin: 0;
+            border-left: 3px solid #3498db;
         }
         .cluster-item .x-post,
         .cluster-item .x-thread {
@@ -265,6 +294,18 @@
         }
         .item-source {
             display: none;
+        }
+        /* Standalone items section */
+        .standalone-section {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 3px solid #e0e0e0;
+        }
+        .standalone-header {
+            font-size: 1.3em;
+            color: #666;
+            margin-bottom: 20px;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -358,7 +399,7 @@
     <div class="x-thread">
     <div class="x-header">
         <a href="https://x.com/sama" target="_blank" class="x-user">
-            <span class="x-display-name"></span>
+            <span class="x-display-name">Sam Altman</span>
             <span class="x-username">@sama</span>
         </a>
         <span class="thread-indicator">Thread (4 posts)</span>
@@ -409,7 +450,7 @@ You can just build things.</p>
     <div class="x-post">
     <div class="x-header">
         <a href="https://x.com/huggingface" target="_blank" class="x-user">
-            <span class="x-display-name"></span>
+            <span class="x-display-name">Hugging Face</span>
             <span class="x-username">@huggingface</span>
         </a>
         <span class="x-time">Feb 05, 12:11</span>
@@ -427,7 +468,7 @@ You can just build things.</p>
     <div class="x-post">
     <div class="x-header">
         <a href="https://x.com/karpathy" target="_blank" class="x-user">
-            <span class="x-display-name"></span>
+            <span class="x-display-name">Andrej Karpathy</span>
             <span class="x-username">@karpathy</span>
         </a>
         <span class="x-time">Feb 04, 19:55</span>
@@ -470,7 +511,7 @@ In 2026, we're likely to see continued improvements on both the model layer and 
     <div class="x-thread">
     <div class="x-header">
         <a href="https://x.com/sama" target="_blank" class="x-user">
-            <span class="x-display-name"></span>
+            <span class="x-display-name">Sam Altman</span>
             <span class="x-username">@sama</span>
         </a>
         <span class="thread-indicator">Thread (2 posts)</span>
@@ -525,7 +566,7 @@ This time belongs to the builders, not the people who want to control them.</p>
     <div class="x-post">
     <div class="x-header">
         <a href="https://x.com/bcherny" target="_blank" class="x-user">
-            <span class="x-display-name"></span>
+            <span class="x-display-name">Boris Cherny</span>
             <span class="x-username">@bcherny</span>
         </a>
         <span class="x-time">Feb 04, 18:49</span>
@@ -550,7 +591,7 @@ Learn more: <a href="https://t.co/mOZ2CW1PII" target="_blank">https://t.co/mOZ2C
     <div class="x-thread">
     <div class="x-header">
         <a href="https://x.com/bcherny" target="_blank" class="x-user">
-            <span class="x-display-name"></span>
+            <span class="x-display-name">Boris Cherny</span>
             <span class="x-username">@bcherny</span>
         </a>
         <span class="thread-indicator">Thread (2 posts)</span>
@@ -638,7 +679,7 @@ Learn more: <a href="https://t.co/mOZ2CW1PII" target="_blank">https://t.co/mOZ2C
 </div>
 <div class="topic-cluster">
     <div class="cluster-header">
-        <h3 class="cluster-topic">Nvidia</h3>
+        <h3 class="cluster-topic">NVIDIA</h3>
         <span class="cluster-count">2 items</span>
     </div>
     <div class="cluster-entities"><span class="entity-tag">NVIDIA</span> <span class="entity-tag">Nvidia</span></div>
@@ -770,7 +811,7 @@ Learn more: <a href="https://t.co/mOZ2CW1PII" target="_blank">https://t.co/mOZ2C
     <div class="x-thread">
     <div class="x-header">
         <a href="https://x.com/huggingface" target="_blank" class="x-user">
-            <span class="x-display-name"></span>
+            <span class="x-display-name">Hugging Face</span>
             <span class="x-username">@huggingface</span>
         </a>
         <span class="thread-indicator">Thread (2 posts)</span>
@@ -810,7 +851,7 @@ It won't solve the differences in scores, but it is transparent!</p>
     <div class="x-post">
     <div class="x-header">
         <a href="https://x.com/huggingface" target="_blank" class="x-user">
-            <span class="x-display-name"></span>
+            <span class="x-display-name">Hugging Face</span>
             <span class="x-username">@huggingface</span>
         </a>
         <span class="x-time">Feb 05, 13:37</span>
@@ -829,7 +870,7 @@ Thanks a lot for your patience</p>
     <div class="x-post">
     <div class="x-header">
         <a href="https://x.com/karpathy" target="_blank" class="x-user">
-            <span class="x-display-name"></span>
+            <span class="x-display-name">Andrej Karpathy</span>
             <span class="x-username">@karpathy</span>
         </a>
         <span class="x-time">Feb 05, 02:10</span>
@@ -847,7 +888,7 @@ Thanks a lot for your patience</p>
     <div class="x-post">
     <div class="x-header">
         <a href="https://x.com/karpathy" target="_blank" class="x-user">
-            <span class="x-display-name"></span>
+            <span class="x-display-name">Andrej Karpathy</span>
             <span class="x-username">@karpathy</span>
         </a>
         <span class="x-time">Feb 05, 01:59</span>
@@ -866,7 +907,7 @@ hidden_dim = (8 * config.n_embd) // 3 <a href="https://t.co/CTJpnZGRE6" target="
     <div class="x-post">
     <div class="x-header">
         <a href="https://x.com/sama" target="_blank" class="x-user">
-            <span class="x-display-name"></span>
+            <span class="x-display-name">Sam Altman</span>
             <span class="x-username">@sama</span>
         </a>
         <span class="x-time">Feb 05, 01:22</span>
@@ -884,7 +925,7 @@ hidden_dim = (8 * config.n_embd) // 3 <a href="https://t.co/CTJpnZGRE6" target="
     <div class="x-post">
     <div class="x-header">
         <a href="https://x.com/moltbook" target="_blank" class="x-user">
-            <span class="x-display-name"></span>
+            <span class="x-display-name">Moltbook</span>
             <span class="x-username">@moltbook</span>
         </a>
         <span class="x-time">Feb 05, 00:21</span>
@@ -902,7 +943,7 @@ hidden_dim = (8 * config.n_embd) // 3 <a href="https://t.co/CTJpnZGRE6" target="
     <div class="x-post">
     <div class="x-header">
         <a href="https://x.com/karpathy" target="_blank" class="x-user">
-            <span class="x-display-name"></span>
+            <span class="x-display-name">Andrej Karpathy</span>
             <span class="x-username">@karpathy</span>
         </a>
         <span class="x-time">Feb 05, 00:18</span>
@@ -920,7 +961,7 @@ hidden_dim = (8 * config.n_embd) // 3 <a href="https://t.co/CTJpnZGRE6" target="
     <div class="x-post">
     <div class="x-header">
         <a href="https://x.com/AIatMeta" target="_blank" class="x-user">
-            <span class="x-display-name"></span>
+            <span class="x-display-name">AI at Meta</span>
             <span class="x-username">@AIatMeta</span>
         </a>
         <span class="x-time">Feb 04, 20:28</span>
@@ -938,7 +979,7 @@ hidden_dim = (8 * config.n_embd) // 3 <a href="https://t.co/CTJpnZGRE6" target="
     <div class="x-post">
     <div class="x-header">
         <a href="https://x.com/ylecun" target="_blank" class="x-user">
-            <span class="x-display-name"></span>
+            <span class="x-display-name">Yann LeCun</span>
             <span class="x-username">@ylecun</span>
         </a>
         <span class="x-time">Feb 04, 19:05</span>
@@ -957,7 +998,7 @@ Grokon.</p>
     <div class="x-post">
     <div class="x-header">
         <a href="https://x.com/bcherny" target="_blank" class="x-user">
-            <span class="x-display-name"></span>
+            <span class="x-display-name">Boris Cherny</span>
             <span class="x-username">@bcherny</span>
         </a>
         <span class="x-time">Feb 04, 18:10</span>
@@ -975,7 +1016,7 @@ Grokon.</p>
     <div class="x-post">
     <div class="x-header">
         <a href="https://x.com/moltbook" target="_blank" class="x-user">
-            <span class="x-display-name"></span>
+            <span class="x-display-name">Moltbook</span>
             <span class="x-username">@moltbook</span>
         </a>
         <span class="x-time">Feb 04, 17:29</span>
@@ -1002,7 +1043,7 @@ p.s. Over 10,000 human developers have already applied. Get faster access by rep
 
     <div class="footer">
         <div class="stats">Total: 54 items (11 Techmeme, 20 TechCrunch, 23 X posts)</div>
-        <div class="timestamp">Generated: 2026-02-05 08:53:11</div>
+        <div class="timestamp">Generated: 2026-02-05 09:01:36</div>
     </div>
 </body>
 </html>

@@ -2,24 +2,31 @@
 """
 AI News Scraper Agent
 Scrapes AI-related news from Techmeme.com and TechCrunch.com,
-fetches posts from X (Twitter) via xpoz MCP server, filters for AI content,
+includes posts from X (Twitter) via xpoz MCP server, clusters by topic,
 and outputs formatted listings to Output.html.
 
 Usage:
-    python ai_news_scraper.py                           # News only
-    python ai_news_scraper.py -x x_posts.json           # News + X posts from JSON
-    python ai_news_scraper.py --x-posts x_posts.json    # News + X posts from JSON
+    python ai_news_scraper.py                    # News + X posts (uses accounts.txt & x_posts.json)
+    python ai_news_scraper.py --list-accounts    # Show accounts to fetch via xpoz MCP
+    python ai_news_scraper.py -a myaccounts.txt  # Use custom accounts file
+
+Files:
+    accounts.txt  - List of X usernames to include (one per line)
+    x_posts.json  - X posts fetched via xpoz MCP (auto-filtered to accounts.txt)
+    Output.html   - Generated news summary clustered by topic
 
 Workflow with xpoz MCP:
-    1. Run this script with -x flag pointing to a JSON file
-    2. The JSON file should contain X posts fetched via Claude using xpoz MCP tools
-    3. See x_posts_template.json for the expected format
+    1. Edit accounts.txt with X usernames you want to follow
+    2. Use Claude with xpoz MCP to fetch posts:
+       mcp__xpoz-mcp__getTwitterPostsByAuthor for each account
+    3. Save results to x_posts.json
+    4. Run: python ai_news_scraper.py
 
-To fetch X posts with Claude (xpoz MCP):
-    Use the mcp__xpoz-mcp__getTwitterPostsByAuthor tool for each account,
-    then save results to a JSON file in the format:
-    [{"username": "...", "display_name": "...", "text": "...", "created_at": "...",
-      "url": "...", "metrics": {"like_count": N, "retweet_count": N, "reply_count": N}}]
+The scraper automatically:
+    - Reads accounts.txt to know which X accounts to include
+    - Filters x_posts.json to only include posts from those accounts
+    - Warns about accounts in accounts.txt that have no posts in x_posts.json
+    - Clusters all content (news + X posts) by topic
 """
 
 import requests
@@ -43,6 +50,23 @@ AI_KEYWORDS = [
     'foundation model', 'ai model', 'ai agent', 'rag',
     'retrieval augmented', 'fine-tuning', 'prompt engineering'
 ]
+
+# Display names for known X accounts
+DISPLAY_NAMES = {
+    'sama': 'Sam Altman',
+    'openai': 'OpenAI',
+    'anthropicai': 'Anthropic',
+    'googledeepmind': 'Google DeepMind',
+    'demaboris': 'Demis Hassabis',
+    'ylecun': 'Yann LeCun',
+    'karpathy': 'Andrej Karpathy',
+    'aiatmeta': 'AI at Meta',
+    'ilyasut': 'Ilya Sutskever',
+    'huggingface': 'Hugging Face',
+    'moltbook': 'Moltbook',
+    'bcherny': 'Boris Cherny',
+    'nanobanana': 'Nano Banana',
+}
 
 # Known entities for topic extraction (companies, products, people, concepts)
 KNOWN_ENTITIES = {
@@ -322,9 +346,12 @@ def load_x_posts_from_json(file_path):
         # Normalize field names from xpoz MCP format
         normalized_posts = []
         for post in posts:
+            username = post.get('username') or post.get('authorUsername', '')
+            # Look up display name from our mapping, falling back to provided name or username
+            display_name = DISPLAY_NAMES.get(username.lower()) or post.get('display_name') or post.get('authorName') or username
             normalized = {
-                'username': post.get('username') or post.get('authorUsername', ''),
-                'display_name': post.get('display_name') or post.get('authorName') or post.get('username', ''),
+                'username': username,
+                'display_name': display_name,
                 'text': post.get('text', ''),
                 'created_at': post.get('created_at') or post.get('createdAt') or post.get('createdAtDate', ''),
                 'url': post.get('url') or f"https://x.com/{post.get('authorUsername', '')}/status/{post.get('id', '')}",
@@ -980,65 +1007,94 @@ def generate_html(techmeme_articles, techcrunch_articles, x_posts=None):
         }}
         /* Topic Cluster Styles */
         .content-summary {{
-            background: #e8f4f8;
-            padding: 15px 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
         }}
         .content-summary p {{
             margin: 0;
-            color: #555;
+            font-size: 1.1em;
+            font-weight: 500;
+        }}
+        .section-divider {{
+            height: 3px;
+            background: linear-gradient(90deg, #e0e0e0 0%, #bbb 50%, #e0e0e0 100%);
+            margin: 40px 0;
+            border-radius: 2px;
         }}
         .topic-cluster {{
-            background: #fafafa;
-            border: 1px solid #e0e0e0;
-            border-radius: 12px;
-            padding: 20px;
-            margin: 20px 0;
+            background: white;
+            border: none;
+            border-radius: 16px;
+            padding: 25px;
+            margin: 30px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-top: 4px solid #3498db;
+        }}
+        .topic-cluster:nth-child(odd) {{
+            border-top-color: #9b59b6;
+        }}
+        .topic-cluster:nth-child(3n) {{
+            border-top-color: #e74c3c;
+        }}
+        .topic-cluster:nth-child(4n) {{
+            border-top-color: #2ecc71;
         }}
         .cluster-header {{
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
         }}
         .cluster-topic {{
             margin: 0;
-            color: #2c3e50;
-            font-size: 1.3em;
+            color: #1a1a1a;
+            font-size: 1.4em;
+            font-weight: 700;
+            letter-spacing: -0.02em;
         }}
         .cluster-count {{
-            background: #3498db;
+            background: linear-gradient(135deg, #3498db, #2980b9);
             color: white;
-            padding: 4px 12px;
-            border-radius: 15px;
+            padding: 6px 16px;
+            border-radius: 20px;
             font-size: 0.85em;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
         }}
         .cluster-entities {{
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }}
         .entity-tag {{
             display: inline-block;
-            background: #ecf0f1;
-            color: #7f8c8d;
-            padding: 3px 10px;
-            border-radius: 12px;
-            font-size: 0.8em;
-            margin-right: 5px;
-            margin-bottom: 5px;
+            background: #f8f9fa;
+            color: #495057;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 0.82em;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            border: 1px solid #e9ecef;
+            font-weight: 500;
         }}
         .cluster-items {{
-            border-top: 1px solid #e0e0e0;
-            padding-top: 15px;
+            border-top: none;
+            padding-top: 5px;
         }}
         .cluster-item {{
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }}
         .cluster-item:last-child {{
             margin-bottom: 0;
         }}
         .cluster-item .article {{
             margin: 0;
+            border-left: 3px solid #3498db;
         }}
         .cluster-item .x-post,
         .cluster-item .x-thread {{
@@ -1046,6 +1102,18 @@ def generate_html(techmeme_articles, techcrunch_articles, x_posts=None):
         }}
         .item-source {{
             display: none;
+        }}
+        /* Standalone items section */
+        .standalone-section {{
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 3px solid #e0e0e0;
+        }}
+        .standalone-header {{
+            font-size: 1.3em;
+            color: #666;
+            margin-bottom: 20px;
+            font-weight: 600;
         }}
     </style>
 </head>
@@ -1073,24 +1141,101 @@ def parse_arguments():
         '-x', '--x-posts',
         type=str,
         metavar='FILE',
-        help='Path to JSON file containing X posts (fetched via xpoz MCP server)'
+        default='x_posts.json',
+        help='Path to JSON file containing X posts (default: x_posts.json)'
+    )
+    parser.add_argument(
+        '-a', '--accounts',
+        type=str,
+        metavar='FILE',
+        default='accounts.txt',
+        help='Path to file containing X account usernames (default: accounts.txt)'
     )
     parser.add_argument(
         '--list-accounts',
-        type=str,
-        metavar='FILE',
-        help='Output the list of accounts from FILE for use with xpoz MCP (does not scrape)'
+        action='store_true',
+        help='Output the list of accounts for use with xpoz MCP (does not scrape)'
     )
     return parser.parse_args()
+
+
+def filter_posts_by_recency(posts, max_age_hours=24):
+    """Filter posts to only include those from the last N hours.
+
+    Returns (recent_posts, dropped_count)
+    """
+    if not posts:
+        return [], 0
+
+    cutoff_time = datetime.now(timezone.utc) - timedelta(hours=max_age_hours)
+    recent = []
+    dropped = 0
+
+    for post in posts:
+        created_at = post.get('created_at') or post.get('createdAt') or post.get('createdAtDate', '')
+
+        if created_at:
+            try:
+                # Handle various date formats
+                if 'T' in str(created_at):
+                    dt = datetime.fromisoformat(created_at.replace('Z', '+00:00'))
+                else:
+                    # Date only format (YYYY-MM-DD)
+                    dt = datetime.strptime(created_at[:10], '%Y-%m-%d').replace(tzinfo=timezone.utc)
+
+                if dt >= cutoff_time:
+                    recent.append(post)
+                else:
+                    dropped += 1
+            except (ValueError, TypeError):
+                # If we can't parse the date, include the post
+                recent.append(post)
+        else:
+            # No date, include the post
+            recent.append(post)
+
+    return recent, dropped
+
+
+def filter_posts_by_accounts(posts, accounts):
+    """Filter posts to only include those from specified accounts.
+
+    Returns (filtered_posts, found_accounts, missing_accounts)
+    """
+    if not accounts:
+        return posts, set(), set()
+
+    # Normalize account names (lowercase for comparison)
+    accounts_lower = {a.lower() for a in accounts}
+
+    filtered = []
+    found_accounts = set()
+
+    for post in posts:
+        username = post.get('username', '') or post.get('authorUsername', '')
+        if username.lower() in accounts_lower:
+            filtered.append(post)
+            found_accounts.add(username.lower())
+
+    missing_accounts = accounts_lower - found_accounts
+
+    return filtered, found_accounts, missing_accounts
 
 
 def main():
     """Main function to orchestrate the news scraping workflow."""
     args = parse_arguments()
 
+    # Load accounts from accounts file
+    accounts_file = Path(args.accounts)
+    if accounts_file.exists():
+        accounts = read_x_accounts(args.accounts)
+    else:
+        accounts = []
+        print(f"Note: Accounts file '{args.accounts}' not found. X posts will not be filtered.")
+
     # Handle --list-accounts mode (for xpoz MCP workflow)
     if args.list_accounts:
-        accounts = read_x_accounts(args.list_accounts)
         if accounts:
             print("\nAccounts to fetch via xpoz MCP:")
             print("-" * 40)
@@ -1099,12 +1244,17 @@ def main():
             print("-" * 40)
             print("\nUse Claude with xpoz MCP to fetch posts from these accounts:")
             print("  1. Call mcp__xpoz-mcp__getTwitterPostsByAuthor for each account")
-            print("  2. Save results to a JSON file")
-            print("  3. Run: python ai_news_scraper.py -x <json_file>")
+            print("  2. Save results to x_posts.json")
+            print("  3. Run: python ai_news_scraper.py")
+        else:
+            print(f"No accounts found. Create '{args.accounts}' with one username per line.")
         return
 
     print("AI News Scraper - Starting...")
     print("-" * 40)
+
+    if accounts:
+        print(f"\nUsing {len(accounts)} accounts from {args.accounts}")
 
     # Fetch from both sources
     print("\nFetching from Techmeme...")
@@ -1121,10 +1271,30 @@ def main():
     # TechCrunch AI category articles are already AI-related
     techcrunch_filtered = techcrunch_raw
 
-    # Load X posts from JSON file if provided (fetched via xpoz MCP)
+    # Load X posts from JSON file
+    x_posts_file = Path(args.x_posts)
     x_posts = []
-    if args.x_posts:
+    if x_posts_file.exists():
         x_posts = load_x_posts_from_json(args.x_posts)
+        initial_count = len(x_posts)
+
+        # Filter posts to only include those from the last 24 hours
+        x_posts, dropped_old = filter_posts_by_recency(x_posts, max_age_hours=24)
+        if dropped_old > 0:
+            print(f"Dropped {dropped_old} posts older than 24 hours")
+
+        # Filter posts to only include accounts from accounts.txt
+        if accounts:
+            x_posts, found_accounts, missing_accounts = filter_posts_by_accounts(x_posts, accounts)
+            print(f"Using {len(x_posts)} recent posts from accounts in {args.accounts}")
+
+            if missing_accounts:
+                print(f"\n⚠️  Missing posts from {len(missing_accounts)} accounts:")
+                for account in sorted(missing_accounts):
+                    print(f"   - @{account}")
+                print(f"   Run xpoz MCP to fetch posts from these accounts.")
+    else:
+        print(f"\nNote: X posts file '{args.x_posts}' not found. Run with --list-accounts to see which accounts to fetch.")
 
     # Generate HTML output
     print("\nGenerating HTML page...")
